@@ -700,6 +700,71 @@ select:focus-visible {
   gap: 12px;
 }
 
+.topRoBlock {
+  padding: 60px 48px;
+  background: #f6fbff;
+}
+
+.topRoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.topRoCard {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 44px rgba(7, 61, 145, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.topRoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px rgba(7, 61, 145, 0.12);
+}
+
+.topRoImage {
+  min-height: 310px;
+  padding: 16px;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(180deg, #ffffff, #eaf6ff),
+    #edf7ff;
+  border-bottom: 1px solid var(--line);
+}
+
+.topRoImage img {
+  width: 100%;
+  height: 100%;
+  max-height: 310px;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 220ms ease;
+}
+
+.topRoCard:hover .topRoImage img {
+  transform: scale(1.03);
+}
+
+.topRoCard > div:last-child {
+  padding: 20px;
+}
+
+.topRoCard h3 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.topRoCard a {
+  color: var(--blue);
+  font-weight: 900;
+}
+
 .bookingCard {
   padding: 26px;
   border-radius: 22px;
@@ -1549,6 +1614,10 @@ select:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .topRoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .productIntro {
     grid-template-columns: 1fr;
   }
@@ -1569,6 +1638,7 @@ select:focus-visible {
   .sectionBlock,
   .processBlock,
   .coverageBlock,
+  .topRoBlock,
   .reviewsBlock,
   .faqBlock,
   .footer {
@@ -1646,6 +1716,14 @@ select:focus-visible {
 
   .productGrid {
     grid-template-columns: 1fr;
+  }
+
+  .topRoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .topRoImage {
+    min-height: 280px;
   }
 
   .productCard {

@@ -97,6 +97,25 @@ const services = [
   }
 ];
 
+const topRos = [
+  {
+    title: "UTC RO",
+    image: "/assets/products/utc-ro.jpeg"
+  },
+  {
+    title: "UTC Alkaline",
+    image: "/assets/products/utc-alkaline.jpeg"
+  },
+  {
+    title: "Commercial RO",
+    image: "/assets/products/commercial-ro.jpeg"
+  },
+  {
+    title: "SS(Stainless Steel) Water Tank Purifier",
+    image: "/assets/products/ss-stainless-steel-water-tank.jpeg"
+  }
+];
+
 const steps = [
   ["01", "Book", "Call, WhatsApp or submit the quick service form."],
   ["02", "Visit", "A trained technician reaches your location."],
@@ -364,6 +383,33 @@ function Products() {
           </section>
         </div>
       )}
+    </section>
+  );
+}
+
+function TopRO() {
+  return (
+    <section className="topRoBlock">
+      <div className="sectionHeading">
+        <div>
+          <p className="miniLabel">Popular Models</p>
+          <h2>Our Top RO</h2>
+        </div>
+        <a className="secondaryBtn" href="#booking">Ask Price</a>
+      </div>
+      <div className="topRoGrid">
+        {topRos.map((item) => (
+          <article className="topRoCard" key={item.title}>
+            <div className="topRoImage">
+              <img src={item.image} alt={item.title} />
+            </div>
+            <div>
+              <h3>{item.title}</h3>
+              <a href="#booking">Book Installation {"->"}</a>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }
@@ -669,6 +715,7 @@ function App() {
         <Header />
         <Hero />
         <Products />
+        <TopRO />
         <Services />
         <Offers />
         <Process />
