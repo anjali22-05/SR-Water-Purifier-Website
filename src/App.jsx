@@ -51,7 +51,7 @@ const products = [
     title: "SS(Stainless Steel) Water Tank",
     tag: "Stainless Steel Storage",
     type: "Storage",
-    image: "/assets/products/SS Steel Tank.jpeg",
+    image: "/assets/products/ss-stainless-steel-water-tank.jpeg",
     text: "Durable stainless steel water tank purifier with RO support for hygienic daily storage."
   },
   {
